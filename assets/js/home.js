@@ -1,13 +1,13 @@
-window.addEventListener("scroll", () =>{
-    let header = document.querySelector("header")
-    if(window.scrollY > 270){
-        header.classList.add("headerAfter")
-    }else{
-        header.classList.remove("headerAfter")
+window.addEventListener("scroll", () => {
+    let header = document.querySelector("header");
+    if (window.scrollY > 270) {
+        header.classList.add("headerAfter");
+    } else {
+        header.classList.remove("headerAfter");
     }
-})
-const products = document.querySelector(".popularProducts");
+});
 
+const products = document.querySelector(".popularProducts");
 function getData() {
     axios.get("https://fakestoreapi.com/products")
         .then((res) => {
@@ -15,7 +15,6 @@ function getData() {
             visiblity(data);
         });
 }
-
 function visiblity(data) {
     const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts") || "[]");
     products.innerHTML = "";
@@ -23,7 +22,7 @@ function visiblity(data) {
     data.forEach((item) => {
         const isFavorite = favoriteProducts.includes(item.title);
         products.innerHTML += `
-        <div class="products">
+        <div class="products" onclick="redirectToDetails(${item.id})">
             <div class="up-part-img">
                 <img src="${item.image}" alt="">
                 <p>En cok satilan 1. urun</p>
@@ -65,8 +64,8 @@ function visiblity(data) {
         `;
     });
 }
-
 function addFav(event) {
+    event.stopPropagation();
     const productTitle = event.target.parentNode.parentNode.querySelector(".down-part-infos p").textContent;
     event.target.classList.toggle("fa-solid");
     event.target.classList.toggle("fa-regular");
@@ -85,9 +84,13 @@ function addFav(event) {
     }
     localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
 }
-getData();
+
+function redirectToDetails(productId) {
+    window.location.href = `pages/detail.html?id=${productId}`;
+}
 const search = document.querySelector('#searchSystem');
 search.addEventListener("input", getSearch);
+
 function getSearch() {
     let value = search.value.toLowerCase().trim();
 
@@ -98,37 +101,39 @@ function getSearch() {
             if (filteredData.length > 0) {
                 visiblity(filteredData);
             } else {
-                products.innerHTML = ""
-                products.innerHTML += `
-                <div class="searchError ">
-            <p>Melumat tapilmadi</p>
-            <i class="alertIcon fa-solid fa-triangle-exclamation"></i>
-        </div>
-                `
+                products.innerHTML = `
+                <div class="searchError">
+                    <p>Melumat tapilmadi</p>
+                    <i class="alertIcon fa-solid fa-triangle-exclamation"></i>
+                </div>
+                `;
             }
-            search.value += ""
+            search.value = ""; 
         });
 }
-
+getData();
 const carouselContainer = document.querySelector('.carousel-sponsor');
-const slides = carouselContainer.querySelectorAll('.childDivs-sponsor');
-const slideCount = slides.length;
-let currentSlideIndex = 0;
-const nextButton = document.querySelector('.rightArrow');
-const prevButton = document.querySelector('.leftArrow');
+if (carouselContainer) {
+    const slides = carouselContainer.querySelectorAll('.childDivs-sponsor');
+    const slideCount = slides.length;
+    let currentSlideIndex = 0;
+    const nextButton = document.querySelector('.rightArrow');
+    const prevButton = document.querySelector('.leftArrow');
 
-nextButton.addEventListener('click', () => {
-  currentSlideIndex = (currentSlideIndex + 1) % slideCount;
-  updateSlides();
-});
+    nextButton.addEventListener('click', () => {
+        currentSlideIndex = (currentSlideIndex + 1) % slideCount;
+        updateSlides();
+    });
 
-prevButton.addEventListener('click', () => {
-  currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
-  updateSlides();
-});
-function updateSlides() {
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${(index - currentSlideIndex) * 100}%)`;
-  });
+    prevButton.addEventListener('click', () => {
+        currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
+        updateSlides();
+    });
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${(index - currentSlideIndex) * 100}%)`;
+        });
+    }
+    updateSlides();
 }
-updateSlides();
