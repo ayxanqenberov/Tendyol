@@ -309,6 +309,7 @@ header .header-down-part ul li span {
   font-size: 15px;
   color: black;
   padding-top: 7px;
+  font-weight: bold;
 }
 #populars .popularProducts .products .down-part-infos .price {
   display: flex;
@@ -528,4 +529,14 @@ footer .footer-part div .download img {
   .footer-part .download img {
     width: 100px !important;
   }
+}
+#products {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#products #favProducts {
+  background-color: wheat;
+  width: 80%;
+  height: 15rem;
 }
