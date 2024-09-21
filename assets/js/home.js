@@ -22,7 +22,7 @@ function visiblity(data) {
     data.forEach((item) => {
         const isFavorite = favoriteProducts.includes(item.title);
         products.innerHTML += `
-        <div class="products" onclick="getDetails(${item.id})">
+        <div class="products">
             <div class="up-part-img">
                 <img src="${item.image}" alt="">
                 <p>En cok satilan 1. urun</p>
@@ -105,7 +105,7 @@ function getSearch() {
                 </div>
                 `;
             }
-            search.value += ""; 
+            search.value += "";
         });
 }
 getData();

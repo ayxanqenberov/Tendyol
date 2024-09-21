@@ -2,9 +2,156 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 30px;
     #favProducts{
         background-color: wheat;
         width: 80%;
-        height: 15rem;    
+        min-height: 600px;
+        height: auto; 
+        display: flex;
+        align-items: center;
+        justify-content: space-around;   
+        flex-wrap: wrap;
+        .haventFavs{
+            font-size: 55px;
+            color: white;
+        }
+        .products {
+            width: 300px;
+            height: 500px;
+            .up-part-img {
+                position: relative;
+                img {
+                    width: 300px;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0px 0px;
+                }
+
+                p {
+                    background: linear-gradient(270.43deg, #FFC000 0%, #F27A1A 100%);
+                    text-align: center;
+                    color: white;
+                    font-weight: bold;
+                }
+                .deleteFav{
+                    position: absolute;
+                    top: 4%;
+                    right: 5%;
+                    font-size: 17px;
+                    background-color: white;
+                    border-radius: 50%;
+                    padding: 5px;
+                    z-index: 999;
+                    cursor: pointer;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    &:hover{
+                        transition: all .1s;
+                        color: #F27A1A;
+                    }
+                }
+            }
+
+            .down-part-infos {
+                background-color: white;
+                border-radius: 0px 0px 10px 10px;
+                padding-bottom: 15px;
+                padding-left: 9px;
+                height: 170px;
+                p {
+                    font-size: 15px;
+                    color: black;
+                    padding-top: 7px;
+                    font-weight: bold;
+                }
+
+                .price{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    span:nth-child(1){
+                        color: grey;
+                        text-decoration: line-through;
+                        font-weight: 100;
+                    }
+                    span:nth-child(2){
+                        color: #BB0031;
+                        font-weight: 900;
+                    }
+                }
+                span {
+                    color: red;
+                    padding-top: 4px;
+                }
+                .sale{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    // height: 25px;
+                    
+                    i{
+                        font-size: 14px;
+                        color: red;
+                    }
+                    span{
+                        color: red;
+                    }
+                }
+                .ratings{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    span{
+                        color: black;
+                    }
+                    div{
+                        i{
+                            color: orange;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .opportunity{
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 10px;
+                    .coupon{
+                        display: flex;
+                        align-items: center;
+                        background-color: #fff4ec;
+                        border-radius: 7px;
+                        padding: 3px;
+                        cursor: pointer;
+                        span{
+                            color: black;
+                            font-size: 14px;
+                        }
+                    }
+                    .buymorepayless{
+                        background-color: #fff0f5;
+                        display: flex;
+                        align-items: center;
+                        padding: 3px;
+                        border-radius: 7px;
+                        cursor: pointer;
+                        span{
+                            color: black;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    #favProducts{
+        width: 100% !important;
+        margin: none !important;
+        .haventFavs{
+            font-size: 25px !important;
+        }
     }
 }
