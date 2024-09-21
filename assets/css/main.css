@@ -691,3 +691,89 @@ footer .footer-part div .download img {
     font-size: 25px !important;
   }
 }
+#moreInfoSect {
+  display: flex;
+  justify-content: space-around;
+}
+#moreInfoSect #moreInfos {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 30px;
+}
+#moreInfoSect #moreInfos .informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30rem;
+  width: 45%;
+}
+#moreInfoSect #moreInfos .informations .title {
+  color: black;
+  font-weight: 900;
+}
+#moreInfoSect #moreInfos .informations .description {
+  color: #666697;
+  font-size: 14px;
+  font-weight: 600;
+}
+#moreInfoSect #moreInfos .informations .category {
+  background-color: rgb(234, 233, 233);
+  width: auto;
+  padding: 7px;
+  border-radius: 3px;
+}
+#moreInfoSect #moreInfos .informations .category span:nth-child(1) {
+  color: black;
+  font-weight: bold;
+}
+#moreInfoSect #moreInfos .informations .category span:nth-child(2) {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+#moreInfoSect #moreInfos .informations .ratings {
+  display: flex;
+  gap: 11px;
+}
+#moreInfoSect #moreInfos .informations .ratings span:nth-child(1) {
+  font-weight: bold;
+}
+#moreInfoSect #moreInfos .informations .ratings div {
+  color: orange;
+}
+#moreInfoSect #moreInfos .informations .price {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  border: 1px solid #BB0000;
+  gap: 5px;
+  padding: 13px;
+  border-radius: 8px;
+}
+#moreInfoSect #moreInfos .informations .price .sale {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #BB0000;
+  font-weight: 800;
+  text-align: center;
+  background-color: #FEEAEA;
+  padding: 4px;
+  border-radius: 3px;
+}
+#moreInfoSect #moreInfos .informations .price .productPrice {
+  color: #BB0000;
+  font-size: 20px;
+  font-weight: 900;
+}
+#moreInfoSect #moreInfos .informations .atToBasket {
+  width: 90%;
+  height: 35px;
+  background-color: #F27A1A;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}

@@ -135,7 +135,9 @@ if (carouselContainer) {
     updateSlides();
 }
 
-function moreInfos(){
+function moreInfos() {
     window.location.href = '../assets/pages/details.html'
-    
+    const moreInfo = document.querySelector("#moreInfo")
+    moreInfo.innerHTML = ``
 }
+

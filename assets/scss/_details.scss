@@ -1,0 +1,87 @@
+#moreInfoSect{
+    display: flex;
+    justify-content: space-around;
+    #moreInfos{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 30px;
+        .informations{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 30rem;
+            width: 45%;
+            .title{
+                color: black;
+                font-weight: 900;
+            }
+            .description{
+                color: #666697;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .category{
+                background-color: rgb(234, 233, 233);
+                width: auto;
+                padding: 7px;
+                border-radius: 3px;
+                span:nth-child(1){
+                    color: black;
+                    font-weight: bold;
+                }
+                span:nth-child(2){
+                    text-transform: capitalize;
+                    font-weight: 400;
+                }
+            }
+            .ratings{
+                display: flex;
+                gap: 11px;
+                span:nth-child(1){
+                    font-weight: bold;
+                }
+                div{
+                    color: orange;
+                }
+            }
+            .price{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                align-items: center;
+                border: 1px solid #BB0000;
+                gap: 5px;
+                padding: 13px;
+                border-radius: 8px;
+            
+                .sale{
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                    color: #BB0000;
+                    font-weight: 800;
+                    text-align: center;
+                    background-color: #FEEAEA;
+                    padding: 4px;
+                    border-radius: 3px;
+                }
+                .productPrice{
+                    color: #BB0000;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+            .atToBasket{
+                width: 90%;
+                height: 35px;
+                background-color: #F27A1A;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}

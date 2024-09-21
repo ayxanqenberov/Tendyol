@@ -86,3 +86,5 @@ function deleteFav(title) {
     favoriteProducts.push(...updatedFavorites);
     getData();
 }
+const searchInput = document.querySelector('#searchSystem');
+searchInput.addEventListener("input", getSearch);
