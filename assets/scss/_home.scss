@@ -336,6 +336,7 @@ header {
                     text-align: center;
                     color: white;
                     font-weight: bold;
+                    cursor: pointer;
                 }
                 .myFav{
                     position: absolute;
@@ -366,6 +367,11 @@ header {
                     color: black;
                     padding-top: 7px;
                     font-weight: bold;
+                    cursor: pointer;
+                    &:hover{
+                        transition: all .2s;
+                        color: #F27A1A;
+                    }
                 }
 
                 .price{

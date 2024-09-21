@@ -10,11 +10,16 @@
         height: auto; 
         display: flex;
         align-items: center;
-        justify-content: space-around;   
+        justify-content: space-evenly;   
         flex-wrap: wrap;
+        padding: 20px;
         .haventFavs{
             font-size: 55px;
             color: white;
+            span{
+                color: black;
+                font-size: 25px;
+            }
         }
         .products {
             width: 300px;
@@ -87,7 +92,6 @@
                     display: flex;
                     align-items: center;
                     gap: 5px;
-                    // height: 25px;
                     
                     i{
                         font-size: 14px;

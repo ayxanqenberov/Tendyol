@@ -282,6 +282,7 @@ header .header-down-part ul li span {
   text-align: center;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 #populars .popularProducts .products .up-part-img .myFav {
   position: absolute;
@@ -310,6 +311,11 @@ header .header-down-part ul li span {
   color: black;
   padding-top: 7px;
   font-weight: bold;
+  cursor: pointer;
+}
+#populars .popularProducts .products .down-part-infos p:hover {
+  transition: all 0.2s;
+  color: #F27A1A;
 }
 #populars .popularProducts .products .down-part-infos .price {
   display: flex;
@@ -543,12 +549,17 @@ footer .footer-part div .download img {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 20px;
 }
 #products #favProducts .haventFavs {
   font-size: 55px;
   color: white;
+}
+#products #favProducts .haventFavs span {
+  color: black;
+  font-size: 25px;
 }
 #products #favProducts .products {
   width: 300px;

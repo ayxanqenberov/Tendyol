@@ -29,7 +29,7 @@ function visiblity(data) {
                 <i onclick="addFav(event)" class="myFav ${isFavorite ? 'fa-solid' : 'fa-regular'} fa-heart" style="color: ${isFavorite ? 'red' : ''};"></i>
             </div>
             <div class="down-part-infos">
-                <p>${item.title}</p>
+                <p onclick="moreInfos()">${item.title}</p>
                 <div class="price">
                     <span>790TL</span>
                     <span>${item.price}TL</span>
@@ -133,4 +133,9 @@ if (carouselContainer) {
         });
     }
     updateSlides();
+}
+
+function moreInfos(){
+    window.location.href = '../assets/pages/details.html'
+    
 }
