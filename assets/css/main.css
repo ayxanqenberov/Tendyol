@@ -255,6 +255,23 @@ header .header-down-part ul li span {
   align-items: center;
   padding-bottom: 20px;
 }
+#populars .sortBtn {
+  position: relative;
+  width: 80%;
+  margin: 10px;
+}
+#populars .sortBtn input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+#populars .sortBtn i {
+  position: absolute;
+  left: 12.8%;
+  top: 10%;
+  cursor: pointer;
+}
 #populars .popularProducts {
   width: 80%;
   background-color: #dcdbdb;
@@ -700,7 +717,9 @@ footer .footer-part div .download img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 30px;
+  margin: 30px;
+  border-radius: 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #moreInfoSect #moreInfos .informations {
   display: flex;
@@ -769,11 +788,20 @@ footer .footer-part div .download img {
   font-weight: 900;
 }
 #moreInfoSect #moreInfos .informations .atToBasket {
-  width: 90%;
+  width: 50%;
   height: 35px;
   background-color: #F27A1A;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #ededed;
   font-size: 20px;
+  cursor: pointer;
+}
+#moreInfoSect #moreInfos .informations .atToBasket:hover {
+  transition: all 0.5s;
+  background-color: #ef6c00;
+  color: #fff;
+}
+#moreInfoSect #moreInfos img {
+  height: 20rem;
 }

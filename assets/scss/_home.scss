@@ -310,6 +310,25 @@ header {
     align-items: center;
     padding-bottom: 20px;
 
+    .sortBtn{
+        position: relative;
+        width: 80%;
+        margin: 10px ;
+        button{
+            display: flex;
+            justify-content: space-between;
+            padding: 6px;
+            border-radius: 6px;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+        i{
+            position: absolute;
+            left: 12.8%;
+            top: 10%;
+            cursor: pointer;
+        }
+    }
     .popularProducts {
         width: 80%;
         background-color: #dcdbdb;

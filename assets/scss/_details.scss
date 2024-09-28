@@ -6,7 +6,9 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 0 30px;
+        margin: 30px;
+        border-radius: 7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         .informations{
             display: flex;
             flex-direction: column;
@@ -74,14 +76,23 @@
                 }
             }
             .atToBasket{
-                width: 90%;
+                width: 50%;
                 height: 35px;
                 background-color: #F27A1A;
                 border: none;
                 border-radius: 10px;
-                color: white;
+                color: #ededed;
                 font-size: 20px;
+                cursor: pointer;
+                &:hover{
+                    transition: all .5s;
+                    background-color: #ef6c00;
+                    color: #fff;
+                }
             }
+        }
+        img{
+            height: 20rem;
         }
     }
 }

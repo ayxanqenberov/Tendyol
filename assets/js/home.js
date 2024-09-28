@@ -136,5 +136,5 @@ if (carouselContainer) {
 }
 
 function getDetail(id){
-    window.location.href = `assets/pages/details.html?id=${id}`
+    window.location.href = `pages/details.html?id=${id}`
 }
